@@ -1,4 +1,4 @@
-{-# LANGUAGE OverloadedLabels, LambdaCase #-}
+{-# LANGUAGE OverloadedLabels #-}
 import Control.Lens
 import Data.Extensible
 import Data.Extensible.GetOpt

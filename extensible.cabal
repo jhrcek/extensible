@@ -16,7 +16,14 @@ copyright:           Copyright (c) 2017-2022 Fumiaki Kinoshita
 category:            Data, Records
 build-type:          Simple
 stability:           experimental
-Tested-With:         GHC == 8.10.7, GHC == 9.0.1, GHC == 9.2.1, GHC == 9.10.1
+Tested-With:         GHC == 8.10.7
+                      || == 9.0.2
+                      || == 9.2.8
+                      || == 9.4.8
+                      || == 9.6.7
+                      || == 9.8.4
+                      || == 9.10.1
+                      || == 9.12.2
 
 extra-source-files:
   examples/*.hs
@@ -86,7 +93,7 @@ library
     , constraints
     , deepseq
     , ghc-prim
-    , hashable >= 1.2 && <1.5
+    , hashable >= 1.2 && <1.6
     , incremental >= 0.3.1
     , membership
     , prettyprinter ^>= 1.7
@@ -96,7 +103,6 @@ library
     , StateVar
     , tagged
     , template-haskell
-    , text
     , th-lift >= 0.8
     , transformers
     , unordered-containers
