@@ -1,4 +1,4 @@
-{-# LANGUAGE LambdaCase, TemplateHaskell, TypeFamilies #-}
+{-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE DefaultSignatures #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE MultiParamTypeClasses #-}

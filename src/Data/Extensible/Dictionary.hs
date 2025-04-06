@@ -1,5 +1,5 @@
 {-# LANGUAGE LambdaCase #-}
-{-# LANGUAGE TemplateHaskell #-}
+{-# LANGUAGE TemplateHaskellQuotes #-}
 {-# LANGUAGE TypeFamilies, ScopedTypeVariables #-}
 {-# LANGUAGE UndecidableInstances, MultiParamTypeClasses #-}
 {-# LANGUAGE UndecidableSuperClasses #-}
@@ -45,7 +45,7 @@ import qualified Data.HashMap.Strict as KM
 import Data.Functor.Compose
 import qualified Data.HashMap.Strict as HM
 import Data.Incremental
-import Data.Maybe (isJust)
+import Data.Maybe (isJust, fromMaybe)
 import Data.Monoid (Any(..))
 import Prettyprinter
 import qualified Data.Vector.Generic as G
@@ -123,7 +123,7 @@ instance WrapForall Bounded h xs => Bounded (xs :& h) where
 instance WrapForall TH.Lift h xs => TH.Lift (xs :& h) where
   lift = hfoldrWithIndexFor (Proxy :: Proxy (Instance1 TH.Lift h))
     (\_ x xs -> infixE (Just $ TH.lift x) (varE '(<:)) (Just xs)) (varE 'nil)
-#if MIN_VERSION_template_haskell(2,17,0) 
+#if MIN_VERSION_template_haskell(2,17,0)
   liftTyped e = TH.Code $ TH.TExp <$> TH.lift e
 #elif MIN_VERSION_template_haskell(2,16,0)
   liftTyped e = TH.TExp <$> TH.lift e
@@ -225,7 +225,7 @@ instance Forall (KeyTargetAre KnownSymbol (Instance1 J.FromJSON h)) xs => J.From
   parseJSON = J.withObject "Object" $ \v -> hgenerateFor
     (Proxy :: Proxy (KeyTargetAre KnownSymbol (Instance1 J.FromJSON h)))
     $ \m -> let k = stringKeyOf m
-      in fmap Field $ J.prependFailure ("parsing " ++ show k ++ ": ") $ J.parseJSON $ maybe J.Null id $ KM.lookup k v
+      in fmap Field $ J.prependFailure ("parsing " ++ show k ++ ": ") $ J.parseJSON $ fromMaybe J.Null $ KM.lookup k v
 
 instance Forall (KeyTargetAre KnownSymbol (Instance1 J.ToJSON h)) xs => J.ToJSON (xs :& Field h) where
   toJSON = J.Object . hfoldlWithIndexFor

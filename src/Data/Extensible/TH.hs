@@ -1,4 +1,4 @@
-{-# LANGUAGE Trustworthy, TemplateHaskell, LambdaCase, ViewPatterns #-}
+{-# LANGUAGE Trustworthy, TemplateHaskellQuotes, LambdaCase, ViewPatterns #-}
 ------------------------------------------------------------------------
 -- |
 -- Module      :  Data.Extensible.TH

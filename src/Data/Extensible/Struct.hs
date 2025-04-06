@@ -58,7 +58,6 @@ import Data.Extensible.Wrapper
 import Data.Profunctor.Rep
 import Data.Profunctor.Sieve
 import Data.Proxy
-import Data.Kind (Type)
 import qualified Data.StateVar as V
 import GHC.Types
 import qualified Type.Membership.HList as L
