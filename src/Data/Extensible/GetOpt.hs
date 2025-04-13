@@ -7,7 +7,7 @@
 --
 -- Maintainer  :  Fumiaki Kinoshita <fumiexcel@gmail.com>
 --
--- A wrapper for 'System.Console.GetOpt'.
+-- A wrapper for "System.Console.GetOpt".
 --
 -- See also: <https://www.schoolofhaskell.com/user/fumieval/extensible/getopt-and-extensible-records GetOpt and extensible records - School of Haskell>
 --
