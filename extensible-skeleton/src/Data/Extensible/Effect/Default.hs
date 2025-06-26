@@ -1,5 +1,4 @@
 {-# LANGUAGE MultiParamTypeClasses, UndecidableInstances #-}
-{-# LANGUAGE BangPatterns #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE CPP #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
@@ -117,7 +116,7 @@ instance (Monoid e, Lookup xs "Either" (Const e)) => MonadPlus (Eff xs) where
 pCont :: Proxy "Cont"
 pCont = Proxy
 
-instance MonadCont (Eff ((ContDef r (Eff xs)) ': xs)) where
+instance MonadCont (Eff (ContDef r (Eff xs) ': xs)) where
   callCC = callCCEff pCont
 
 -- | mtl-compatible reader

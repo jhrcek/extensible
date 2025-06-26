@@ -3,7 +3,6 @@
 {-# LANGUAGE StandaloneDeriving #-}
 {-# LANGUAGE ScopedTypeVariables, TypeFamilies #-}
 {-# LANGUAGE CPP #-}
-{-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE UndecidableSuperClasses #-}
 {-# LANGUAGE PolyKinds #-}
 -----------------------------------------------------------------------------

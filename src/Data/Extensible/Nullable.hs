@@ -1,4 +1,4 @@
-{-# LANGUAGE LambdaCase, TypeFamilies, TemplateHaskell #-}
+{-# LANGUAGE TypeFamilies #-}
 ------------------------------------------------------------------------
 -- |
 -- Module      :  Data.Extensible.Nullable

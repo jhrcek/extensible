@@ -1,4 +1,4 @@
-{-# LANGUAGE TemplateHaskell, DataKinds, TypeOperators, TypeFamilies, FlexibleContexts, OverloadedLabels #-}
+{-# LANGUAGE DataKinds, TypeOperators, TypeFamilies, FlexibleContexts, OverloadedLabels #-}
 import Data.Extensible
 import Control.Lens
 

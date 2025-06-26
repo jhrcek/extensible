@@ -10,22 +10,23 @@
 --
 -- * Basic
 --
---     * 'Data.Extensible.Class': basic membership operations.
---     * 'Data.Extensible.Product': Combinators for extensible products
---     * 'Data.Extensible.Sum': the basic interface for extensible sums
---     * 'Data.Extensible.Field': extensible records and variants
---     * 'Data.Extensible.Inclusion': shrinking records and widening variants
+--     * [Class]("Data.Extensible.Class"): basic membership operations.
+--     * [Product]("Data.Extensible.Product"): Combinators for extensible products
+--     * [Sum]("Data.Extensible.Sum"): the basic interface for extensible sums
+--     * [Field]("Data.Extensible.Field"): extensible records and variants
+--     * [Inclusion]("Data.Extensible.Inclusion"): shrinking records and widening variants
 --
 -- * Advanced
---     * 'Data.Extensible.Record': Conversion between regular records and
---     extensible records
---     * 'Data.Extensible.Nullable': Nullable records
---     * 'Data.Extensible.Tangle': Extensible tangle
---     * 'Data.Extensible.Effect': Extensible effects
---     * 'Data.Extensible.Match': Extensible pattern match
+--
+--     * [Record]("Data.Extensible.Record"): Conversion between regular records and extensible records
+--     * [Nullable]("Data.Extensible.Nullable"): Nullable records
+--     * [Tangle]("Data.Extensible.Tangle"): Extensible tangle
+--     * [Effect]("Data.Extensible.Effect"): Extensible effects
+--     * [Match]("Data.Extensible.Match"): Extensible pattern match
 --
 -- * Internal
---     * 'Data.Extensible.Wrapper': Stock wrappers
+--
+--     * [Wrapper]("Data.Extensible.Wrapper"): Stock wrappers
 -----------------------------------------------------------------------------
 module Data.Extensible (
   module Data.Extensible.Class
